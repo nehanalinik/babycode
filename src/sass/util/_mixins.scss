@@ -1,0 +1,13 @@
+@use './functions' as f;
+
+@mixin primaryBtn($bgcolor, $color, $borderColor, $fontSize, $fontWeight){
+  padding: f.rem(8) f.rem(30);
+  background-color: $bgcolor;
+  color: $color;
+  border: 1px solid $borderColor;
+  border-radius: f.rem(50);
+  cursor: pointer;
+  transition: 0.3s all ease-in;
+  font-size: f.rem($fontSize);
+  font-weight: $fontWeight;
+}

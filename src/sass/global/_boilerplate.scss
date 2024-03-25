@@ -1,0 +1,43 @@
+@use './fonts' as f;
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+button,
+a,
+li {
+    font-family: inherit;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: f.$font1;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a9a9a9;
+    border-radius: 10px;
+}

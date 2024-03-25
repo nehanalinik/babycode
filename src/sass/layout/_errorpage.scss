@@ -1,0 +1,64 @@
+@use '../global' as g;
+@use '../util' as u;
+
+.errorpage {
+    height: 100vh;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        padding: 0 u.rem(20);
+
+        font-size: u.rem(20);
+        color: g.$primary;
+        font-weight: 600;
+        text-decoration: none;
+
+        img {
+            width: 50px;
+        }
+    }
+
+    .error-container {
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        row-gap: u.rem(5);
+        padding: 0 u.rem(5);
+
+        h2 {
+            color: g.$primary;
+            text-align: center;
+            padding-bottom: u.rem(30);
+            font-size: u.rem(34);
+        }
+
+        h5 {
+            color: g.$grey;
+            padding-bottom: u.rem(14);
+            padding: 0 u.rem(10);
+            font-size: u.rem(18);
+        }
+
+        p {
+            color: g.$grey;
+            font-size: u.rem(18);
+            font-weight: 400;
+            padding: u.rem(10) 0;
+
+            a {
+                color: g.$primary;
+                transition: 0.3s all ease-in;
+                font-weight: 500;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

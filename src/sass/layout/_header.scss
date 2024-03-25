@@ -1,0 +1,89 @@
+@use '../global' as g;
+@use '../util' as u;
+
+.header-container {
+    height: 100%;
+    width: min(100% - u.rem(10), u.rem(1024));
+    margin-inline: auto;
+    display: grid;
+    grid-template-rows: 1fr;
+
+    @include u.breakpoint-down(xsmall) {
+        grid-template-rows: 1fr 1fr;
+    }
+
+    &-top {
+        // background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        @include u.breakpoint-down(xsmall) {
+            padding-inline: u.rem(20);
+            justify-content: space-between;
+        }
+
+        .personicon {
+            width: 30px;
+        }
+
+        .activetabname {
+            display: none;
+
+            @include u.breakpoint-down(xsmall) {
+                display: block;
+                font-size: u.rem(14);
+                color: g.$white;
+            }
+        }
+
+        .instagramicon {
+            width: 30px;
+            display: none;
+
+            @include u.breakpoint-down(xsmall) {
+                display: block;
+            }
+        }
+    }
+
+    &-bottom {
+        display: none;
+
+        @include u.breakpoint-down(xsmall) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: g.$white;
+
+            &-btns {
+                font-size: u.rem(14);
+                display: flex;
+                column-gap: u.rem(8);
+                background-color: #3d6abeaa;
+                padding: u.rem(6) u.rem(8);
+                border-radius: u.rem(50);
+                margin-bottom: u.rem(4);
+                a{
+                    color: g.$white;
+                    text-decoration: none;
+                    padding: u.rem(2) u.rem(10);
+                    border-radius: u.rem(50);
+                    font-size: u.rem(14);
+                    text-transform: uppercase;
+                    transition: 0.3s all ease-in;
+                    &:focus{
+                        background-color: g.$white;
+                        color: g.$primary;
+                        font-weight: 500;
+                    }
+                }
+                a.active{
+                    background-color: g.$white;
+                    color: g.$primary;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
