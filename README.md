@@ -1,5 +1,5 @@
 ## Project Details
-Project build for babycode test
+Project build for babycode (test) - Responsive Website
 
 ### Tech Used
 
